@@ -1,7 +1,7 @@
 # instawork
 
 Implemented a simple team-member management application for Instawork that allows the user to view, edit, add, and delete team members.
-***Time Taken: Approx 5 hours***
+**Time Taken: Approx 5 hours
 
 Check if Python is installed
 
