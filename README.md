@@ -5,7 +5,7 @@ Implemented a simple team-member management application for Instawork that allow
 
 ## Check if Python is installed
 
-## Install pipenv and django first:
+## Install pipenv and Django if you don't have it:
 1. pip3 install pipenv
 2. pipenv shell
 3. pipenv install django
