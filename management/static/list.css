@@ -1,0 +1,84 @@
+body {
+  font-family: sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-top: 55px;
+  margin-bottom: 12px;
+  color: rgb(83, 83, 83);
+}
+
+h2 {
+  white-space:nowrap;
+}
+
+p {
+  color: rgb(138, 138, 138);
+}
+
+.teammember-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.number-of-members {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.name {
+  color: rgb(83, 83, 83);
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.phone-number {
+  margin-top: 10px;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.email {
+  font-size: 17px;
+  margin-top: 9px;
+}
+
+.btn-primary {
+  color: rgb(56, 125, 214);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+}
+
+.teammember-image {
+  width: 70px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.teammember-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.teammember-info {
+  width: calc(100% - 220px);
+}
+
+.line {
+  width: 100%; 
+  height: 1px; 
+  background-color: lightgrey;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

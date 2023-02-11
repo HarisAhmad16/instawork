@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+  </head>
+  <body>
+    {% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}" />
+        <title>Edit Team Member</title>
+      </head>
+      <body>
+        <h1>Edit team member</h1>
+        <p class="sub-title">Edit contact info, location, and role.</p>
+        <div class="line"></div>
+        <p class="header-title">Info</p>
+        <form method="post">
+          {% csrf_token %}
+          <div class="input-seperator">
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="First Name"
+              class="full-width-input"
+              value="{{ member.first_name }}"
+            />
+          </div>
+          <div class="input-seperator">
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              placeholder="Last Name"
+              class="full-width-input"
+              value="{{ member.last_name }}"
+            />
+          </div>
+          <div class="input-seperator">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class="full-width-input"
+              value="{{ member.email }}"
+            />
+          </div>
+          <div class="input-seperator">
+            <input
+              type="text"
+              id="phone_number"
+              name="phone_number"
+              placeholder="Phone Number"
+              class="full-width-input"
+              value="{{ member.phone_number }}"
+            />
+          </div>
+          <div>
+            <p class="header-title-role">Role</p>
+            <label class="header-title-role" for="role"></label>
+            <div>
+              <div id="role">
+                <p>
+                  <label class="type-role" for="regular"
+                    >Regular - Can't delete members</label
+                  >
+                  <input class="radio" type="radio" id="regular" name="role"
+                  value="1" {% if member.role == 1 %}checked{% endif %} />
+                </p>
+                <div class="line"></div>
+                <p>
+                  <label class="type-role" for="admin"
+                    >Admin - Can delete members
+                  </label>
+                  <input class="radio" type="radio" id="admin" name="role"
+                  value="2" {% if member.role == 2 %}checked{% endif %} />
+                </p>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+          <button class="delete" type="submit" name="delete" {% if member.role != 2 %}disabled style="border-color:lightgray;"{% endif %}>Delete</button>
+          <button class="save" type="submit">Save</button>
+        </form>
+      </body>
+    </html>
+  </body>
+</html>
