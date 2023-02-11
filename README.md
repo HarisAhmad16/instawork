@@ -11,7 +11,7 @@ Install pipenv and django first:
 
 Clone the repo and launch the app
 1. git clone https://github.com/HarisAhmad16/instawork-managementapp.git
-4. cd instawork-managementapp
+4. cd instawork
 5. python manage.py migrate or python3 manage.py migrate
 6. python manage.py runserver or python3 manage.py runserver
 
